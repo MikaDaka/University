@@ -12,10 +12,7 @@
 ## Запуск
 1. Установите Python 3.10+.
 2. (Опционально) Установите зависимости: `pip install -r requirements.txt`.
-3. В одном терминале: `python logging_server.py`.
-4. В другом: `python server1.py`.
-5. В другом: `python server2.py`.
-6. В отдельном: `python client.py`.
+3. Запустите `run_all.bat`.
 
 ## Docker (GUI)
 - Построить: `docker build -t client-gui -f Dockerfile.client.gui .`
@@ -25,4 +22,5 @@
 - Серверы реализуют lock‑порт, чтобы предотвратить повторный запуск.
 - Серверы отправляют DATA подписчикам только при реальном изменении payload (ts исключён из сравнения).
 - LogServer сохраняет JSON‑логи с меткой времени.
+
 
