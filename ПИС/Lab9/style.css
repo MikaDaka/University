@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.parallax {
+    background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    margin-top: 0;
+}

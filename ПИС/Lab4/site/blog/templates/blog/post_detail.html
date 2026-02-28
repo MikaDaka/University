@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+    <img src="/static/logo.png" class="logo">
+    <h1>{{ post.title }}</h1>
+</header>
+
+<div class="container">
+    <p class="date">{{ post.created_date }}</p>
+    <p>{{ post.text }}</p>
+
+    <a href="/" class="back">← Назад ко всем постам</a>
+</div>
+
+</body>
+</html>

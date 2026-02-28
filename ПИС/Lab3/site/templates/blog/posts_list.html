@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список постов</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background: #f4f4f4; }
+        .post { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+        .date { color: #777; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h1>Все посты</h1>
+
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p class="date">{{ post.created_date }}</p>
+            <p>{{ post.text }}</p>
+        </div>
+    {% empty %}
+        <p>Пока нет ни одного поста.</p>
+    {% endfor %}
+</body>
+</html>
