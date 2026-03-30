@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h2>Вход</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    {% if form.errors %}
+        <div class="error">
+            Неверное имя пользователя или пароль.
+        </div>
+    {% endif %}
+
+    <p>
+        <label for="id_username">Имя пользователя:</label><br>
+        {{ form.username }}
+    </p>
+
+    <p>
+        <label for="id_password">Пароль:</label><br>
+        {{ form.password }}
+    </p>
+
+    <button type="submit">Войти</button>
+</form>
+
+<style>
+.error {
+    color: #b30000;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+</style>
+
+{% endblock %}

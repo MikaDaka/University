@@ -1,0 +1,43 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h2>Создание поста</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <p>
+        <label for="id_title">Заголовок:</label><br>
+        {{ form.title }}
+        <small>{{ form.title.help_text }}</small>
+
+        {% if form.title.errors %}
+            <div class="error">{{ form.title.errors.0 }}</div>
+        {% endif %}
+    </p>
+
+    <p>
+        <label for="id_body">Текст:</label><br>
+        {{ form.body }}
+        <small>{{ form.body.help_text }}</small>
+
+        {% if form.body.errors %}
+            <div class="error">{{ form.body.errors.0 }}</div>
+        {% endif %}
+    </p>
+
+    <button type="submit">Опубликовать</button>
+</form>
+
+<style>
+.error {
+    color: #b30000;
+    font-size: 14px;
+    margin-top: 4px;
+}
+small {
+    color: #555;
+    font-size: 13px;
+}
+</style>
+
+{% endblock %}

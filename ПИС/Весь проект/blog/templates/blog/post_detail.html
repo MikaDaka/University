@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h2>{{ post.title }}</h2>
+
+<p>{{ post.text|linebreaks }}</p>
+
+<p><small>Автор: {{ post.author.username }}</small></p>
+<p><small>Создано: {{ post.created_date|date:"d.m.Y H:i" }}</small></p>
+
+<a class="btn" href="/">Назад</a>
+{% endblock %}
